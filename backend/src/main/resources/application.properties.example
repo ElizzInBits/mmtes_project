@@ -1,0 +1,13 @@
+spring.application.name=horacerta-backend
+server.port=8081
+
+# Evolution API Configuration
+evolution.api.url=http://localhost:8082
+evolution.api.token=SEU_EVOLUTION_TOKEN #Token disponível na env da api EVOLUTION
+evolution.api.instance=horacerta
+
+# Google Calendar Configuration
+google.calendar.id=SEU_GOOGLE_CALENDAR_ID #Esse id fica disponíve na propria agenda, basta acessar as configurações e pegar o id da conta
+
+# Chatbot Configuration
+chatbot.trigger.keyword=/teste  #Esse comando serve para casos de teste, se o whatsapp pessoal estiver conectado, contatos podem mandar mensagem normalmente sem que o bot responda, agora contatos que sabem sobre o comando, podem enviá-lo para testear a ferramenta.

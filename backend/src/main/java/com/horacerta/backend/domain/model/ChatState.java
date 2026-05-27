@@ -1,0 +1,14 @@
+package com.horacerta.backend.domain.model;
+
+public enum ChatState {
+    IDLE,
+    MENU_PRINCIPAL,
+    VERIFICANDO_CATALOGO,
+    SOLICITANDO_ORCAMENTO,
+    ESCOLHENDO_DATA,
+    ESCOLHENDO_HORARIO,
+    COLETANDO_NOME,
+    COLETANDO_CPF,
+    CONFIRMANDO_AGENDAMENTO,
+    AGENDAMENTO_FINALIZADO
+}
