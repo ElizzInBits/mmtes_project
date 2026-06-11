@@ -31,7 +31,6 @@ public class ChatbotUseCase {
                     newSession.setCurrentState(ChatState.IDLE);
                     newSession.setContext(new HashMap<>());
                     newSession.setLastInteraction(LocalDateTime.now());
-                    sessionRepository.save(newSession);
                     return newSession;
                 });
 
