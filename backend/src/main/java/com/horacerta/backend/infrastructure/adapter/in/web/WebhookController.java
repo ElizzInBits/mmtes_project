@@ -1,6 +1,6 @@
 package com.horacerta.backend.infrastructure.adapter.in.web;
 
-import com.horacerta.backend.application.usecase.ChatbotUseCase;
+import com.horacerta.backend.application.usecase.ChatbotService;
 import com.horacerta.backend.domain.port.out.ChatSessionRepository;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -21,14 +21,14 @@ public class WebhookController {
 
     private static final Logger log = LoggerFactory.getLogger(WebhookController.class);
 
-    private final ChatbotUseCase chatbotUseCase;
+    private final ChatbotService chatbotUseCase;
     private final ChatSessionRepository sessionRepository;
 
     // Palavra-chave que ativa o chatbot quando não há sessão ativa
     @org.springframework.beans.factory.annotation.Value("${chatbot.trigger.keyword:/teste}")
     private String triggerKeyword;
 
-    public WebhookController(ChatbotUseCase chatbotUseCase, ChatSessionRepository sessionRepository) {
+    public WebhookController(ChatbotService chatbotUseCase, ChatSessionRepository sessionRepository) {
         this.chatbotUseCase = chatbotUseCase;
         this.sessionRepository = sessionRepository;
     }
