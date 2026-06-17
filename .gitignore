@@ -7,31 +7,37 @@
 Thumbs.db
 desktop.ini
 
+# Java/Maven
+**/target/
+**/out/
+**/.mvn/
+**/*.jar
+**/*.war
+**/*.ear
+**/bin/
+**/.classpath
+**/.project
+**/.settings/
 
-backend/target/
-backend/out/
-backend/.mvn/
-backend/*.jar
-backend/*.war
-backend/*.ear
-backend/bin/
-backend/.classpath
-backend/.project
-backend/.settings/
+# Configurações sensíveis (Backend)
+**/src/main/resources/application.properties
+**/src/main/resources/google-credentials.json
 
-backend/src/main/resources/application.properties
-backend/src/main/resources/google-credentials.json
+# Evolution API (Externo)
+**/evolution/
 
-#Eu seria maluca de subir a api inteira do evolution
-evolution/
-
+# Logs e arquivos temporários
 *.log
 logs/
 temp/
 tmp/
+
+# Node/Web
 node_modules/
 dist/
 build/
+
+# Variáveis de ambiente
 .env
 .env.local
 .env.development.local
