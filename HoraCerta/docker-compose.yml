@@ -69,7 +69,7 @@ services:
     environment:
       - POSTGRES_DB=evolution_db
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=abacaxiverde
+      - POSTGRES_PASSWORD=horacerta
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
