@@ -40,7 +40,7 @@ O template de conversa do backend pode ser personalizado conforme o objetivo da 
     - [Opções do menu principal](#opções-do-menu-principal)
   - [Endpoints disponíveis](#endpoints-disponíveis)
     - [Swagger UI](#swagger-ui)
-    - [WhatsApp Connection — `/api/v1/whatsapp`](#whatsapp-connection--apiv1whatsapp)
+    - [WhatsApp Connection : `/api/v1/whatsapp`](#whatsapp-connection--apiv1whatsapp)
     - [Webhook: `/api/v1/webhook`](#webhook-apiv1webhook)
   - [Observações importantes](#observações-importantes)
 
@@ -179,7 +179,7 @@ HoraCerta/
 ├── backend/
 ├── docker-compose.yml
 └── evolution/
-    └── evolution-api/       ← pasta clonada da Evolution API
+    └── evolution-api/       < pasta clonada da Evolution API
         ├── .env.example
         ├── Dockerfile
         └── ...
@@ -383,7 +383,7 @@ HoraCerta/
 │       ├── application.properties       # Configurações (não versionado)
 │       └── google-credentials.json      # Credenciais Google (não versionado)
 └── evolution/
-    └── evolution-api/                   # ← clonar de github.com/EvolutionAPI/evolution-api
+    └── evolution-api/                   # clonar de github.com/EvolutionAPI/evolution-api
         └── .env                         # Variáveis de ambiente da Evolution 
 ```
 
@@ -448,7 +448,7 @@ Documentação interativa completa com todos os endpoints:
 http://localhost:8081/swagger-ui.html
 ```
 
-### WhatsApp Connection — `/api/v1/whatsapp`
+### WhatsApp Connection : `/api/v1/whatsapp`
 
 | Método | Endpoint               | Descrição                                        |
 | ------ | ---------------------- | ------------------------------------------------ |
