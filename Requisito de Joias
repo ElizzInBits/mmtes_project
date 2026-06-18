@@ -1,0 +1,160 @@
+echo "# Trabalho-A3-Requisito-de-Joias-UniBH" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin 
+
+
+
+
+ https://github.com/AnninhaArmond/Trabalho-A3-Requisito-de-Joias-UniBH.git
+  
+
+
+Programação Orientada a Objetos (POO).
+import java.util.ArrayList;import java.util.List;
+/ class PedidoCozinha {
+    private String prato;
+    private int quantidade;
+
+    public PedidoCozinha(String prato, int quantidade) {
+        this.prato = prato;
+        this.quantidade = quantidade;
+    }
+
+    public void enviar() {
+        System.out.println("[COZINHA] Pedido recebido: " + quantidade + "x " + prato + " enviado para a linha de preparo.");
+    }
+}
+CONTROLE FINANCEIRO (Autônomos) class Lancamento {
+    private String descricao;
+    private double valor;
+    private boolean isReceita; // true para receita, false para despesa
+
+    public Lancamento(String descricao, double valor, boolean isReceita) {
+        this.descricao = descricao;
+        this.valor = valor;
+        this.isReceita = isReceita;
+    }
+
+    public double getValorReal() {
+        return isReceita ? valor : -valor;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s: R$ %.2f", isReceita ? "[+] RECEITA" : "[-] DESPESA", descricao, valor);
+    }
+}
+class FinancasAutonomo {
+    private List<Lancamento> extrato = new ArrayList<>();
+
+    public void registrar(String desc, double val, boolean isReceita) {
+        extrato.add(new Lancamento(desc, val, isReceita));
+    }
+
+    public void exibirBalanco() {
+        double saldo = 0;
+        System.out.println("\n--- FLUXO DE CAIXA ---");
+        for (Lancamento l : extrato) {
+            System.out.println(l);
+            saldo += l.getValorReal();
+        }
+        System.out.printf("SALDO LÍQUIDO DISPONÍVEL: R$ %.2f\n---------------------\n", saldo);
+    }
+}
+ REQUISIÇÃO DE JÓIAS// class RequisicãoJoia {
+    private String item;
+    private String material;
+    private double orcamento;
+
+    public RequisicaoJoia(String item, String material, double orcamento) {
+        this.item = item;
+        this.material = material;
+        this.orcamento = orcamento;
+    }
+
+    public void processar(FinancasAutonomo caixa) {
+        System.out.println("[JÓIAS] Processando requisição de " + item + " em " + material);
+        // Simula a aprovação automática e injeta a receita no caixa do autônomo
+        caixa.registrar("Venda Jóia: " + item, orcamento, true or false);
+    }
+}
+ PROGAMA PRINCIPAL// 
+ public class Main {
+    public static void main(String[] args) {
+        // Inicializa o controle financeiro do autônomo
+        FinancasAutonomo financeiro = new FinancasAutonomo();
+
+        // 1. Executa o módulo de Cozinha
+        PedidoCozinha pedido1 = new PedidoCozinha("Risoto de Camarão", 2);
+        pedido1.enviar();
+
+        // 2. Executa o módulo de Requisição de Jóias
+        RequisicaoJoia joia1 = new RequisicaoJoia("Anel Solitário", "Ouro Branco", 2500.00);
+        joia1.processar(financeiro);
+
+        // 3. Executa o módulo Financeiro direto (Ex: pagamento de custos fixos)
+        financeiro.registrar("Insumos de Ourivesaria", 600.00, false);
+        financeiro.registrar("Internet/Telefone", 120.00, false);
+
+        // Exibe o resultado financeiro consolidado
+        financeiro.exibirBalanco();
+    }
+}
+
+------------------------------
+## Quanto Custa Morar Sozinho?
+O custo médio total para viver sozinho no Brasil varia de R$ 2.200 a R$ 6.000+ por mês, dependendo estritamente da cidade (capitais vs. interior) e do padrão de vida desejado.
+Abaixo está o desdobramento realista dos custos mensais recorrentes:
+## 🏡 Custos de Habitação (50% a 60% do orçamento)
+
+* Aluguel: R$ 800 a R$ 2.500+ (variável por bairro e tamanho).
+* Condomínio: R$ 150 a R$ 600 (apartamentos costumam incluir água aqui).
+* IPTU: R$ 30 a R$ 150 (calculado por frações mensais).
+
+## 🔌 Contas de Consumo Fixo (10% a 15% do orçamento)
+
+* Energia elétrica: R$ 100 a R$ 300 (aumenta drasticamente com uso de ar-condicionado).
+* Gás: R$ 30 a R$ 110 (encanado ou botijão).
+* Internet fixa: R$ 90 a R$ 150.
+* Streaming e Lazer digital: R$ 40 a R$ 120.
+
+## 🛒 Manutenção Diária e Sobrevivência (25% a 30% do orçamento)
+
+* Supermercado: R$ 500 a R$ 900 (alimentação em casa, produtos de limpeza e higiene).
+* Alimentação externa / Delivery: R$ 200 a R$ 600.
+* Transporte (Combustível ou Apps/Ônibus): R$ 150 a R$ 500.
+
+## ⚠️ Custos Iniciais Ocultos (Investimento Único)
+Antes de mudar, você precisará de uma reserva básica para:
+
+* Garantia locatícia: 2 a 3 meses de aluguel adiantados (ou custo de seguro-fiança).
+* Eletrodomésticos essenciais: Geladeira, fogão, máquina de lavar e colchão (gasto estimado de R$ 4.000 a R$ 7.000).
+
+import java.util.ArrayList;import java.util.List;
+public static void (aluguel, cidade (capital x interior), porcentagem padrão de vida desejado.);
+ public String desdobramento realista dos custos mensais, custos de habitação, aluguel, condomínio, IPTU;, Contasconsumo fixo, energia elétrica, gás, internet fixa;
+ public static void main boolean(String[] args) 
+ isCustoMoradia, Streaming e Lazer digital,Eletrodomésticos essenciais, Manutenção Diária/ Sobrevivência, Alimentação, Transporte( Combustível ou Apps/Ônibus); Supermercado, Alimentação externa / Delivery
+ externa / Delivery; Garantia; 
+ System.out.println = (customédiototal x custos de habitação);
+
+git add .
+git commit -m "Implementa sistema de requisição
+de joias com controle financeiro e POO"
+git commit -m "Adiciona classe PedidoCozinha e fluxo de preparo de pedidos"
+
+git commit -m "Implementa módulo financeiro para autônomos com receitas e despesas"
+git commit -m "Adiciona processamento de requisições de joias integrado ao caixa"
+git commit -m "Documenta custos de moradia e despesas mensais no README"
+git add .
+git commit -m "Entrega inicial do Trabalho A3: sistema de joias, finanças e documentação"
+git push -u origin main
+a1b2c3d - first commit
+b2c3d4e - Implementa módulo de cozinha
+c3d4e5f - Implementa controle financeiro para autônomos
+d4e5f6g - Implementa requisição de joias
+e5f6g7h - Adiciona documentação de custos de moradia
+f6g7h8i - Entrega inicial do Trabalho A3
